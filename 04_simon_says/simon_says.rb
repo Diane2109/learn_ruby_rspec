@@ -25,13 +25,15 @@ def first_word(word)
   p "#{word.partition(" ").first}"
 end
 
-def titleize(sentence)
-  if sentence.split.map(&:capitalize).join(' ').include? "The"
-    p sentence = sentence.sub 'The', 'the'
-  elsif sentence.split.map(&:capitalize).join(' ').include? "And"
-    p sentence = sentence.sub 'And', 'and'
-  else p sentence = sentence.split.map(&:capitalize).join(' ')
-  end
+def titleize (word)
+	words_to_ignore = ["the","and"]
+	if word.split.size>1
+		a = word.split.first.capitalize
+		b = word.split(' ')[1..-1].join(' ').split.each{|i| i.capitalize! if ! words_to_ignore.include? i  }
+   		 .join(' ')
+   		 p "#{a} #{b}"
+   else p word.capitalize
+end
 end
 
 

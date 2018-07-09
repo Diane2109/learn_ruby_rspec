@@ -27,16 +27,6 @@ def power(u,v)
   p power_number = u ** v
 end
 
-def factorial(z)
-  k = 1
-  j = 1
-  loop do
-    j = k * j
-    k = k + 1
-    break if k > z
-    p j
-  end
-end
 
 add(0,0)
 add(2,2)
@@ -48,6 +38,3 @@ multiply(3, 4)
 multiply(2, 5)
 multiply(0, 9)
 power(3, 2)
-factorial(0)
-factorial(1)
-factorial(2)
